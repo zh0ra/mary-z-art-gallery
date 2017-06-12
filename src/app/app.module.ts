@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ArtproductListComponent } from './artproduct-list/artproduct-list.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtproductListComponent
+    ArtproductListComponent,
+    GalleryComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
