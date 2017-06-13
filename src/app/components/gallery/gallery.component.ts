@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-
+  pageTite:string = "Marys Gallery";
   constructor() { }
   @Input() datasource;
   selectedImage;
@@ -17,4 +17,10 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
   }
 
+  navigate(forward: boolean) {
+    var index = this.datasource.indexOf(this.selectedImage) + (forward ? 1 : -1);
+    if (index >= 0 && index < this.datasource.length) {
+      this.selectedImage = this.datasource[index];
+    }
+  }
 }

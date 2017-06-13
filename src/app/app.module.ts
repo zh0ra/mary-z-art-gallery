@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ArtproductListComponent } from './artproduct-list/artproduct-list.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { UserComponent } from './components/user/user.component';
+import { AuthRegistrationComponent } from './components/auth-registration/auth-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtproductListComponent,
     GalleryComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    UserComponent,
+    AuthRegistrationComponent
   ],
   imports: [
     BrowserModule,
