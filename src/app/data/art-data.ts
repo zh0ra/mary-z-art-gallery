@@ -1,5 +1,9 @@
-[
-      {
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
+export class ArtData implements InMemoryDbService{
+    createDb(){
+        let images = [
+            {
         "id":1,
         "url": "assets/resources/images/img_01.jpg",
         "title": "Flower",
@@ -65,4 +69,7 @@
         "title": "Violin mistery",
         "caption": " My violin was created in USA a long, long time ago. When it was merlin age..."
       }
-    ]
+        ];
+        return {images};
+    }
+}

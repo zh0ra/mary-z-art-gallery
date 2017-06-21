@@ -1,16 +1,9 @@
-<!--<div class="app-root">
-  <h2>{{artOne.nameArtProduct}}</h2>
-  <img src='{{artOne.imageURL}}'>
-<p>{{artOne.artStyle}}</p>
-<p>Author: {{artOne.authorLastName}} {{artOne.authorFirstName}}.</p>
-<table>
-<tr>
-<p>{{artOne.description}}</p>
-</tr>
-</table>
-</div>-->
-
-<h1 id="gal-title">Gallery page</h1>
-<app-gallery [datasource]="images"> </app-gallery>
-
+<div>
+    <nav>
+        <a [routerLink]="['']" routerLinkActive="{exac:true}}">Home</a>
+        <a [routerLink]="['/gallery-wrapper']" routerLinkActive="active">Gallery</a>
+        <a [routerLink]="['/app-auth-registration']" routerLinkActive="active">LogIn</a>
+        <router-outlet></router-outlet>
+    </nav>
+</div>
 

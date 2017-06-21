@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
+  public greeting = (name: string):string => 'Welcome to ' + name + 'Z Gallery';;
   constructor() { }
 
   ngOnInit() {

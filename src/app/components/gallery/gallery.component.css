@@ -30,17 +30,17 @@ p {
    -webkit-margin-before: 5px !important;
    -webkit-margin-after: 5px !important;
 }
-.btn-back, .btn-forward{
+/*.btn-back, .btn-forward{
 	position:absolute;
 	opacity:0.9;
 	background-color:black;
 	padding:10px;
 	top:190;
 	color:white;
-	/*text-weight:bold;*/
+	text-weight:bold;
 	cursor:pointer;
 }
  
 .btn-forward{
 	left:612;
-}
+}*/
