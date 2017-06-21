@@ -15,6 +15,7 @@ errorMessage: string;
   ngOnInit() {
     this.getAllImages();
   }
+  
   getAllImages(){
     this.imageService.getImages()
     .subscribe(
