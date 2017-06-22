@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthRegistrationComponent implements OnInit {
   
-  title:string = "Authorization and Registration Form";
+  title:string = "Authorization or Registration Form";
 
   constructor() { }
 

@@ -3,28 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { Routes, RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import { UserComponent } from './components/user/user.component';
 import { AuthRegistrationComponent } from './components/auth-registration/auth-registration.component';
 import { GalleryWrapperComponent } from './components/gallery-wrapper/gallery-wrapper.component';
-import { AppRoutesModule } from './app-routes.module';
 import { ImageService } from "./services/image.service";
 
-// const appRoutes: Routes = [
-// {path: '',redirectTo: "welcome",pathMatch: 'full'},
-// {path: 'gallery-wrapper', component: GalleryWrapperComponent},
-// {path: 'user', component: UserComponent},
-// {path: '**', redirectTo:'/'}
-// ];
+import {Routes, RouterModule} from '@angular/router';
+
+const appRoutes: Routes = [
+{path: '', redirectTo: "home",pathMatch: 'full'},
+{path:'home', component: WelcomeComponent},
+{path: 'gallery-wrapper', component: GalleryWrapperComponent},
+{path: 'app-auth-registration', component: AuthRegistrationComponent},
+{path: '**', redirectTo:'/'}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    GalleryWrapperComponent,
     GalleryComponent, 
     WelcomeComponent,
     UserComponent,
@@ -35,10 +34,8 @@ import { ImageService } from "./services/image.service";
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutesModule
-
-     // RouterModule.forRoot(appRoutes)
-  ],
+    RouterModule.forRoot(appRoutes)
+    ],
   providers: [ImageService],
   bootstrap: [AppComponent]
 })

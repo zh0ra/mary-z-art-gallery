@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {AppRoutesModule} from './app-routes.module';
+//import {AppRoutesModule} from './app-routes.module';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,9 @@ import {AppRoutesModule} from './app-routes.module';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+ name : string;
+  copyright:string = " Mary Z all right reserved.";
+  
   constructor(private route: Router) {
   }
   goHome(){

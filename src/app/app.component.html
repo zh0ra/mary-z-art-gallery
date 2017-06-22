@@ -1,9 +1,14 @@
 <div>
     <nav>
-        <a [routerLink]="['']" routerLinkActive="{exac:true}}">Home</a>
-        <a [routerLink]="['/gallery-wrapper']" routerLinkActive="active">Gallery</a>
-        <a [routerLink]="['/app-auth-registration']" routerLinkActive="active">LogIn</a>
-        <router-outlet></router-outlet>
+        <a [routerLink]="['']" routerLinkActive="exac:true" name="home-p">Home</a>
+        <a [routerLink]="['/gallery-wrapper']" routerLinkActive="active" name="gallery-p">Gallery</a>
+        <a [routerLink]="['/app-auth-registration']" routerLinkActive="active" name="auth-p">LogIn</a>
+        <!--<router-outlet></router-outlet>-->
+        <div id="content">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
     </nav>
 </div>
-
+ <p>&copy; 2017 {{copyright}}</p>
