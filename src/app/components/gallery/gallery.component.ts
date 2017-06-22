@@ -8,12 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class GalleryComponent implements OnInit {
   pageTite:string = "Marys Gallery";
-
-  constructor() {}
   copyright:string = " Mary Z all right reserved.";
   @Input() datasource;
-
   selectedImage;
+
+  constructor() {}
 
   setSelectedImage(img) {
     this.selectedImage = img;
